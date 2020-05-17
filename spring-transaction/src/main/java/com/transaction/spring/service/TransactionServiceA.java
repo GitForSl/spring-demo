@@ -26,6 +26,7 @@ public class TransactionServiceA {
         userAccountMapper.serviceAInsert();
         //REQUIRED
         transactionServiceB.required();
+//        try{ transactionServiceB.required(); } catch (Exception e) {}
         //TODO exception :int result = 1 / 0;
     }
 
@@ -41,7 +42,7 @@ public class TransactionServiceA {
         userAccountMapper.serviceAInsert();
         //REQUIRES_NEW
         transactionServiceB.requiredNew();
-//        try{ transactionServiceB.nested(); } catch (Exception e) {}
+//        try{ transactionServiceB.requiredNew(); } catch (Exception e) {}
         //TODO exception :int result = 1 / 0;
     }
 
@@ -73,7 +74,7 @@ public class TransactionServiceA {
         userAccountMapper.serviceAInsert();
         //SUPPORTS
         transactionServiceB.support();
-//        try{ transactionServiceB.nested(); } catch (Exception e) {}
+//        try{ transactionServiceB.support(); } catch (Exception e) {}
         //TODO exception :int result = 1 / 0;
     }
 
@@ -89,7 +90,7 @@ public class TransactionServiceA {
         userAccountMapper.serviceAInsert();
         //NOT_SUPPORTED
         transactionServiceB.notSupport();
-//        try{ transactionServiceB.nested(); } catch (Exception e) {}
+//        try{ transactionServiceB.notSupport(); } catch (Exception e) {}
         //TODO exception :int result = 1 / 0;
     }
 
@@ -105,7 +106,7 @@ public class TransactionServiceA {
         userAccountMapper.serviceAInsert();
         //MANDATORY
         transactionServiceB.mandatory();
-//        try{ transactionServiceB.nested(); } catch (Exception e) {}
+//        try{ transactionServiceB.mandatory(); } catch (Exception e) {}
         //TODO exception :int result = 1 / 0;
     }
 
@@ -121,7 +122,7 @@ public class TransactionServiceA {
         userAccountMapper.serviceAInsert();
         //NEVER
         transactionServiceB.never();
-//        try{ transactionServiceB.nested(); } catch (Exception e) {}
+//        try{ transactionServiceB.never(); } catch (Exception e) {}
         //TODO exception :int result = 1 / 0;
     }
 
