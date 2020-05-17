@@ -18,8 +18,8 @@ public class TransactionServiceA {
      * 若当前存在事务，就加入当前事务，若没有事务则新启一个事务
      * <p>
      * 1： B异常，数据全部回滚
-     * 2： A异常，数据全部回滚 (REQUIRED与REQUIRES_NEW有)
-     * 3： B异常A捕获B异常，数据全部回滚 (REQUIRED与NESTED有)
+     * 2： A异常，数据全部回滚 (REQUIRED与REQUIRES_NEW有区别)
+     * 3： B异常A捕获B异常，数据全部回滚 (REQUIRED与NESTED有区别)
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public void testRequired() {
