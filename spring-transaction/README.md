@@ -18,7 +18,7 @@ redo log,undo log与binlog参考文章https://www.jianshu.com/p/090087c22820
 
 spring在事务操作的时候，若不指定隔离级别，default级别默认使用数据库的隔离级别
 不同的隔离会带来数据的脏读，幻读，不可重复读，看下面表格
-
+![image](https://github.com/GitForSl/photos/blob/master/spring-demo/transaction/20200517173336.png)
 
 
 ### 事务的传播特性
