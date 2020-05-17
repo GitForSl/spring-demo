@@ -83,7 +83,7 @@ public class TransactionServiceA {
      * <p>
      * 1： B异常，数据都不回滚
      * 2： A异常，A回滚
-     * 3： B异常A捕获B异常，A回滚
+     * 3： B异常A捕获B异常，数据都不回滚
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public void testNotSupport() {
@@ -113,11 +113,8 @@ public class TransactionServiceA {
     /**
      * 以非事务方式运行，若当前存在事务，就抛出异常
      * <p>
-     * 1： B异常，数据全部回滚
-     * 2： A异常，数据全部回滚
-     * 3： B异常A捕获B异常，数据全部回滚
+     * 1： A,B异常，数据都不回滚
      */
-    @Transactional(propagation = Propagation.REQUIRED)
     public void testNever() {
         userAccountMapper.serviceAInsert();
         //NEVER
