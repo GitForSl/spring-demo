@@ -25,8 +25,6 @@ spring在事务操作的时候，若不指定隔离级别，default级别默认�
 |repeatable_read|no|no|yes|
 |serializable|no|no|no|
 
-![image](https://github.com/GitForSl/photos/blob/master/spring-demo/transaction/20200517173336.png)
-
 
 ### 事务的传播特性
 * Propagation.REQUIRED：若当前存在事务，就加入当前事务，若没有事务则新启一个事务
