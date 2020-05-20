@@ -35,5 +35,9 @@ spring在事务操作的时候，若不指定隔离级别，default级别默认�
 * Propagation.NEVER：以非事务方式运行，若当前存在事务，就抛出异常
 * Propagation.NESTED：嵌套事务，若当前存在事务，就当前事务里嵌套一个事务运行，若当前不存在事务，则以Propagation.REQUIRED方式，既开启一个新的事务
 
-
-
+### @Transaction失效的场景
+* 方法未被public修饰
+* 默认检查异常为RuntimeException及子类，若需要其他异常需要加上rollbackFor
+* 确保异常未被try{}catch(Exception e){}
+* 使用的数据库默认不支持事物
+* 同类中一个非@Transaction方法调用一个@Transaction方法，因为这样的方法未增强代理
